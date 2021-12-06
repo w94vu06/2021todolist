@@ -14,6 +14,12 @@ class TodoController extends Controller
         return view('pages.index',compact('data',$data));
     }
 
-        return view('pages.index');
+    public function create(){
+        return view('pages.create');
+    }
+
+    public function store(Request $request)
+    {
+        dd($request);
     }
 }
